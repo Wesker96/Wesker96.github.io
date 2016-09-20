@@ -1,0 +1,345 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Profile</title>
+	<meta charset="UTF-8">
+	<!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
+	<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+	<style>
+			@keyframes flex-anim {
+	  0% {
+	    opacity: 0;
+	    transform: translateX(-100%); }
+	  100% {
+	    opacity: 1;
+	    transform: translateX(0); } }
+	html {
+	  overflow: hidden;
+	  height: 100%; }
+
+	body {
+	  background-color: #FFFFFF;
+	  display: flex;
+	  flex-flow: row wrap;
+	  justify-content: space-around;
+	  height: 100%; }
+
+	.radio {
+	  position: absolute;
+	  opacity: 0; }
+
+	.radio + label {
+	  cursor: pointer; }
+
+	.radio__icon-about:not(checked) + label {
+	  content: "";
+	  display: block;
+	  margin: 20px;
+	  width: 100px;
+	  height: 100px;
+	  min-width: 100px;
+	  min-height: 100px;
+	  background-image: url(images/circle.svg); }
+
+	.radio__icon-about:checked + label {
+	  background-image: url("images/circle_1.svg");
+	  border-radius: 50%;
+	  background-color: #fc0; }
+
+	.radio__icon-about:checked ~ .content > .content__area-1 {
+	  display: flex;
+	  animation-duration: 1s;
+	  animation-fill-mode: both;
+	  animation-name: flex-anim; }
+
+	.radio__icon-expectations:not(checked) + label {
+	  content: "";
+	  display: block;
+	  margin: 20px;
+	  width: 100px;
+	  height: 100px;
+	  min-width: 100px;
+	  min-height: 100px;
+	  background-image: url(images/shape_0.svg); }
+
+	.radio__icon-expectations:checked + label {
+	  border-radius: 50%;
+	  background-color: #fc0; }
+
+	.radio__icon-expectations:checked ~ .content > .content__area-2 {
+	  display: flex;
+	  animation-duration: 1s;
+	  animation-fill-mode: both;
+	  animation-name: flex-anim; }
+
+	.radio__icon-experience:not(checked) + label {
+	  content: "";
+	  display: block;
+	  margin: 20px;
+	  width: 100px;
+	  height: 100px;
+	  min-width: 100px;
+	  min-height: 100px;
+	  background-image: url(images/commerce_0.svg); }
+
+	.radio__icon-experience:checked + label {
+	  border-radius: 50%;
+	  background-color: #fc0; }
+
+	.radio__icon-experience:checked ~ .content > .content__area-3 {
+	  display: flex;
+	  animation-duration: 1s;
+	  animation-fill-mode: both;
+	  animation-name: flex-anim; }
+
+	.content {
+	  width: 100%;
+	  height: 100%;
+	  background-color: #FFFFFF;
+	  margin: 20px 0 0 0;
+	  border-top: 2px solid #A6A6A6; }
+	  .content .content__area-1 {
+	    width: 90%;
+	    height: 100%;
+	    left: 0;
+	    right: 0;
+	    margin-left: auto;
+	    margin-right: auto;
+	    position: relative;
+	    display: none;
+	    flex-flow: row wrap;
+	    justify-content: space-around;
+	    align-items: flex-start; }
+	    .content .content__area-1 .area__img {
+	      display: block;
+	      width: 30%;
+	      max-width: 200px;
+	      max-height: 200px;
+	      min-width: 100px;
+	      min-height: 100px;
+	      background-color: #FFFFFF;
+	      border-radius: 50%;
+	      margin: 20px; }
+	    .content .content__area-1 .area__text {
+	      display: block;
+	      width: 70%;
+	      height: 50%;
+	      min-width: 100px;
+	      min-height: 100px;
+	      background-color: #FFFFFF;
+	      margin: 20px;
+	      border-left: 2px solid #A6A6A6;
+	      overflow-y: auto;
+	      position: relative; }
+	      .content .content__area-1 .area__text h1 {
+	        left: 0;
+	        right: 0;
+	        margin-left: auto;
+	        margin-right: auto;
+	        width: 90%;
+	        background: #FFFFFF;
+	        text-align: center;
+	        font-family: Arial;
+	        font-size: 2em; }
+	      .content .content__area-1 .area__text p {
+	        left: 0;
+	        right: 0;
+	        margin-left: auto;
+	        margin-right: auto;
+	        width: 90%;
+	        height: 100%;
+	        background: #FFFFFF;
+	        text-align: left;
+	        margin-top: 5px;
+	        font-family: Arial;
+	        font-size: 1.5em; }
+	  .content .content__area-2 {
+	    width: 90%;
+	    height: 100%;
+	    left: 0;
+	    right: 0;
+	    margin-left: auto;
+	    margin-right: auto;
+	    position: relative;
+	    display: none;
+	    flex-flow: row wrap;
+	    justify-content: space-around;
+	    align-items: flex-start; }
+	    .content .content__area-2 .area__img {
+	      display: block;
+	      width: 30%;
+	      max-width: 200px;
+	      max-height: 200px;
+	      min-width: 100px;
+	      min-height: 100px;
+	      background-color: #FFFFFF;
+	      border-radius: 50%;
+	      margin: 20px; }
+	    .content .content__area-2 .area__text {
+	      display: block;
+	      width: 70%;
+	      height: 50%;
+	      min-width: 100px;
+	      min-height: 100px;
+	      background-color: #FFFFFF;
+	      margin: 20px;
+	      border-left: 2px solid #A6A6A6;
+	      overflow-y: auto;
+	      position: relative; }
+	      .content .content__area-2 .area__text h1 {
+	        left: 0;
+	        right: 0;
+	        margin-left: auto;
+	        margin-right: auto;
+	        width: 90%;
+	        background: #FFFFFF;
+	        text-align: center;
+	        font-family: Arial;
+	        font-size: 2em; }
+	      .content .content__area-2 .area__text p {
+	        left: 0;
+	        right: 0;
+	        margin-left: auto;
+	        margin-right: auto;
+	        width: 90%;
+	        height: 100%;
+	        background: #FFFFFF;
+	        text-align: left;
+	        margin-top: 5px;
+	        font-family: Arial;
+	        font-size: 1.5em; }
+	  .content .content__area-3 {
+	    width: 90%;
+	    height: 100%;
+	    left: 0;
+	    right: 0;
+	    margin-left: auto;
+	    margin-right: auto;
+	    position: relative;
+	    display: none;
+	    flex-flow: row wrap;
+	    justify-content: space-around;
+	    align-items: flex-start; }
+	    .content .content__area-3 .area__img {
+	      display: block;
+	      width: 30%;
+	      max-width: 200px;
+	      max-height: 200px;
+	      min-width: 100px;
+	      min-height: 100px;
+	      background-color: #FFFFFF;
+	      border-radius: 50%;
+	      margin: 20px; }
+	    .content .content__area-3 .area__text {
+	      display: block;
+	      width: 70%;
+	      height: 50%;
+	      min-width: 100px;
+	      min-height: 100px;
+	      background-color: #FFFFFF;
+	      margin: 20px;
+	      border-left: 2px solid #A6A6A6;
+	      overflow-y: auto;
+	      position: relative; }
+	      .content .content__area-3 .area__text h1 {
+	        left: 0;
+	        right: 0;
+	        margin-left: auto;
+	        margin-right: auto;
+	        width: 90%;
+	        background: #FFFFFF;
+	        text-align: center;
+	        font-family: Arial;
+	        font-size: 2em; }
+	      .content .content__area-3 .area__text p {
+	        left: 0;
+	        right: 0;
+	        margin-left: auto;
+	        margin-right: auto;
+	        width: 90%;
+	        height: 100%;
+	        background: #FFFFFF;
+	        text-align: left;
+	        margin-top: 5px;
+	        font-family: Arial;
+	        font-size: 1.5em; }
+
+	@media screen and (max-width: 1100px) {
+	  html {
+	    overflow-y: auto; }
+
+	  .content .content__area-1 .area__img {
+	    display: none; }
+
+	  .content .content__area-1 .area__text {
+	    width: 100%;
+	    overflow: visible;
+	    border-left: none; }
+
+	  .content .content__area-2 .area__img {
+	    display: none; }
+
+	  .content .content__area-2 .area__text {
+	    width: 100%;
+	    overflow: visible;
+	    border-left: none; }
+
+	  .content .content__area-3 .area__img {
+	    display: none; }
+
+	  .content .content__area-3 .area__text {
+	    width: 100%;
+	    overflow: visible;
+	    border-left: none; } }
+	@media screen and (max-width: 350px) {
+	  .content .content__area-1 .area__text {
+	    font-size: 0.8em; }
+
+	  .content .content__area-2 .area__text {
+	    font-size: 0.8em; }
+
+	  .content .content__area-3 .area__text {
+	    font-size: 0.8em; } }
+
+	/*# sourceMappingURL=style.css.map */
+	</style>
+</head>
+
+<body>
+	<input class="radio radio__icon-about" type="radio" name="main" id="about" checked ><label for="about"></label>
+	<input class="radio radio__icon-expectations" type="radio" name="main" id="expectations"><label for="expectations"></label>
+	<input class="radio radio__icon-experience" type="radio" name="main" id="experience"><label for="experience"></label>
+
+	<main class="content">
+		<section class="content__area-1">
+			<div class="area__img">
+				<img src="images/circle_1.svg" alt="">
+			</div>
+			<div class="area__text">
+				<h1>Я</h1>
+				<p>Привет, меня зовут Павел. Сейчас я учусь в БГУИР на ФРЭ. Хотя учеба и занимает у меня уйму времени, я всегда нахожу его и для своих увлечений. Их много - от спорта и рисования до программирования и радиоэлектроники. Но реальность такова, что во всем не преуспеешь, поэтому приходиться расставлять приоритеты и балансировать над бездонной пропастью. И все же иногда я пытаюсь оспорить это утверждение. С недавних пор я увлекся фронтендом. Это дело так затянуло меня, что я решил посвятить себя ему.</p>
+			</div>
+		</section>
+
+		<section class="content__area-2">
+			<div class="area__img">
+				<img src="images/shape_0.svg" alt="">
+			</div>
+			<div class="area__text">
+				<h1>Опыт</h1>
+				<p>Серьезного опыта у меня пока нету. Около месяца назад, я только слышал о таком языке программирования как JavaScript. Точкой отсчета стала ШРИ, вернее объявление о наборе группы. Окинув взглядом задания в первый раз, мне, пожалуй, было понятно только первое, но так как решать сложные задачи мне не впервой, я решил сделать это. Так я прошел несколько курсов, а начал, наверное, как и многие, с codecademy.com. Прочел несколько книг, в том числе "JavaScript.Полное руководство" Дэвида Флэнагана. Просмотрел не один десяток видео на YouTube. А сколько было прочитано статей больших и маленьких? Так я пришел в мир фронтенда. Это был адский месяц, каждый день приходилось решать кучу новых задач, осваивать новые инструменты, техники. Часто приходилось работать ночью, ну, каждую ночь. И, знаете, мне понравилось.</p>
+			</div>
+		</section>
+
+		<section class="content__area-3">
+			<div class="area__img">
+				<img src="images/commerce_0.svg" alt="">
+			</div>
+			<div class="area__text">
+				<h1>Ожидания</h1>
+				<p>Как вы уже, наверное, поняли, меня интересует опыт и знания. Жду новых сложных задач.</p>
+			</div>
+		</section>
+	</main>
+</body>
+</html>

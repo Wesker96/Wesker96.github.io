@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Junky camera</title>
+
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="filters.css">
+</head>
+<body>
+    <div class="section">
+        <div class="camera">
+            <canvas class="camera__canvas"></canvas>
+            <video autoplay class="camera__video"></video>
+        </div>
+        <div class="controls">
+            <select class="controls__filter">
+                <option value="invert" selected="selected">Инвертировать</option>
+                <option value="grayscale">Оттенки серого</option>
+                <option value="blackwhite">Черно-белый</option>
+            </select>
+        </div>
+    </div>
+
+	<svg>
+		<defs>
+			<filter id="bw">	
+				<fecolormatrix type="saturate" values="3" />
+				<fecomponenttransfer>
+					<fefuncr type="discrete" tablevalues="0 1" />
+					<fefuncg type="discrete" tablevalues="0 1" />
+					<fefuncb type="discrete" tablevalues="0 1" />
+				</fecomponenttransfer>
+				<fecolormatrix type="saturate" values="0" />
+				<fecomponenttransfer>
+					<feFuncR type="linear" slope="100" />
+					<feFuncG type="linear" slope="100" />
+					<feFuncB type="linear" slope="100" />
+				</fecomponenttransfer>
+			</filter>
+		</defs>
+	</svg>
+
+    <script type="text/javascript" src="index.js"></script>
+</body>
+</html>

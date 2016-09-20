@@ -1,0 +1,18 @@
+.grayscale { 
+    -webkit-filter: grayscale(1); 
+    -moz-filter: grayscale(1); 
+    -ms-filter: grayscale(1); 
+    filter: grayscale(10);
+}
+.invert { 
+    -moz-filter: invert(.9); 
+    -ms-filter: invert(.9); 
+    -webkit-filter: invert(.9); 
+    filter: invert(.9);
+}
+.blackwhite {
+    -moz-filter: url("index.html#bw"); 
+    -ms-filter: url("index.html#bw"); 
+	-webkit-filter: url("index.html#bw");
+	filter: url("index.html#bw");
+}
