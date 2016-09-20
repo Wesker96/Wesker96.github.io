@@ -1,0 +1,15 @@
+body {
+	background: coral;
+}
+
+.batton_main {
+	margin: auto;
+	margin-top: 10%;
+	border: 10px dashed black;
+	border-radius: 50%;
+	width: 400px;
+	height: 400px;
+	vertical-align: middle;
+	transform: rotate(0deg);
+	
+}
