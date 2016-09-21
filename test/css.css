@@ -15,10 +15,40 @@ body {
   font-family: RobotoSlab;
   overflow-x: hidden; }
 
-.main_question {
+.evill_triangle {
+  position: absolute;
+  width: 110%;
+  height: 300px;
+  left: -10px;
+  top: -10px;
+  background-image: linear-gradient(165deg, #f6f5f0 35%, rgba(255, 255, 255, 0) 35%);
+  z-index: 1; }
+
+.evill_triangle2 {
+  position: absolute;
+  width: 110%;
+  height: 100%;
+  left: -10px;
+  bottom: -25px;
+  background-image: linear-gradient(165deg, #f6f5f0 24%, rgba(255, 255, 255, 0) 24%), linear-gradient(165deg, rgba(255, 255, 255, 0) 70%, #f6f5f0 70%);
+  z-index: 1; }
+
+.substrate_h {
   width: 50%;
+  height: 1.5em;
   margin: 50px auto;
-  font-size: 1.5em; }
+  font-size: 1.5em;
+  position: relative;
+  z-index: 5; }
+
+.substrate_f {
+  position: relative;
+  width: 100%; }
+
+.main_question {
+  position: absolute;
+  width: 100%;
+  margin: 0px auto; }
   .main_question h1 {
     text-align: center;
     margin: 0px; }
@@ -86,7 +116,7 @@ body {
       border-radius: 50%;
       transform: rotate(120deg);
       right: 150px;
-      top: 370px; }
+      top: 300px; }
     .head_column div .arrow:before,
     .head_column div .arrow:after {
       content: "";
@@ -121,7 +151,8 @@ body {
   overflow: hidden;
   position: relative;
   white-space: nowrap;
-  font-size: 2em; }
+  font-size: 2em;
+  z-index: 5; }
 
 .step_words:before,
 .step_words:after {
@@ -203,20 +234,13 @@ body {
       display: none;
       width: 50px;
       height: 50px; }
-    .menu .slider .filter_1 {
+    .menu .slider .filter {
       z-index: 3;
       position: absolute;
       width: 110%;
       left: -5%;
       height: 400px;
-      background-image: linear-gradient(270deg, rgba(255, 255, 255, 0) 70%, white); }
-    .menu .slider .filter_2 {
-      z-index: 2;
-      position: absolute;
-      width: 110%;
-      left: -5%;
-      height: 400px;
-      background-image: linear-gradient(270deg, white, rgba(255, 255, 255, 0) 30%); }
+      background-image: linear-gradient(270deg, rgba(255, 255, 255, 0) 70%, white), linear-gradient(270deg, white, rgba(255, 255, 255, 0) 30%); }
     .menu .slider .conteiner_pic {
       z-index: 1;
       display: flex;
@@ -310,13 +334,15 @@ body {
   left: -450px; }
 
 .form {
-  display: block; }
+  z-index: 5;
+  position: relative; }
   .form .form_b {
     margin: auto;
     padding: 10px;
+    width: 350px;
     border: 5px solid #cccccc;
     border-radius: 5px;
-    width: 350px; }
+    background-color: white; }
     .form .form_b p {
       text-align: center; }
     .form .form_b .str {

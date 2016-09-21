@@ -39,10 +39,49 @@ body {
 	overflow-x: hidden;
 }
 
-.main_question {
+
+
+
+
+.evill_triangle {
+	position: absolute;
+	width: 110%;
+	height: 300px;
+	left: -10px;
+	top: -10px;
+	background-image: linear-gradient(165deg,rgba(246,245,240,1) 35%,rgba(255,255,255,0) 35%);
+	z-index: 1;
+}
+
+.evill_triangle2 {
+	position: absolute;
+	width: 110%;
+	height: 100%;
+	left: -10px;
+	bottom: -25px;
+	background-image:  linear-gradient(165deg,rgba(246,245,240,1) 24%,rgba(255,255,255,0) 24%),
+	linear-gradient(165deg,rgba(255,255,255,0) 70%,rgba(246,245,240,1) 70%);
+	z-index: 1;
+}
+
+.substrate_h {
 	width: 50%;
+	height: 1.5em;
 	margin: 50px auto;
 	font-size: 1.5em;
+	position: relative;
+	z-index: 5;
+}
+
+.substrate_f {
+	position: relative;
+	width: 100%;
+}
+
+.main_question {
+	position: absolute;
+	width: 100%;
+	margin: 0px auto;
 	h1 {
 		text-align: center;
 		margin: 0px;
@@ -131,7 +170,7 @@ body {
 			border-radius: 50%;
 			transform: rotate(120deg);
 			right: 150px;
-			top: 370px;
+			top: 300px;
 		}
 		.arrow:before,
 		.arrow:after {
@@ -178,6 +217,7 @@ body {
 	position: relative;
 	white-space: nowrap;
 	font-size: 2em;
+	z-index: 5;
 }
 .step_words:before,
 .step_words:after {
@@ -267,22 +307,13 @@ body {
 			height: 50px;
 		}
 
-		.filter_1 {
+		.filter {
 			z-index: 3;
 			position: absolute;
 			width: 110%;
 			left: -5%;
 			height: 400px;
-			background-image: linear-gradient(270deg,rgba(255,255,255,0) 70%,rgba(255,255,255,255));
-		}
-
-		.filter_2 {
-			z-index: 2;
-			position: absolute;
-			width: 110%;
-			left: -5%;
-			height: 400px;
-			background-image: linear-gradient(270deg,rgba(255,255,255,255),rgba(255,255,255,0) 30%);
+			background-image: linear-gradient(270deg,rgba(255,255,255,0) 70%,rgba(255,255,255,255)),linear-gradient(270deg,rgba(255,255,255,255),rgba(255,255,255,0) 30%);
 		}
 
 		.conteiner_pic {
@@ -389,13 +420,15 @@ body {
 #slide3:checked ~ .conteiner_pic { left: -1170px + $widthPic; }
 
 .form {
-	display: block;
+	z-index: 5;
+	position: relative;
 	.form_b {
 		margin: auto;
 		padding: 10px;
+		width: 350px;
 		border: 5px solid #cccccc;
 		border-radius: 5px;
-		width: 350px;
+		background-color: white;
 		p {
 			text-align: center;
 		}
