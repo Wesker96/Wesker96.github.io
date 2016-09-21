@@ -414,12 +414,6 @@ body {
     .head_column div .arrow {
       right: 100px;
       top: 390px; } }
-@media screen and (max-width: 1360px) {
-  .head_column {
-    margin-top: 100px; }
-    .head_column div .arrow {
-      right: 40px;
-      top: 390px; } }
 @media screen and (max-width: 1280px) {
   .substrate_h {
     width: 60%; }
